@@ -11,13 +11,12 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class CreateClubViewController: UIViewController, UITableViewDelegate {
+class CreatePostViewController: UIViewController {
     let defaults = NSUserDefaults.standardUserDefaults();
     
-    @IBOutlet weak var txtName: UITextField!
-    @IBOutlet weak var txtTagline: UITextField!
-    @IBOutlet weak var txtDescription: UITextField!
-    @IBOutlet weak var txtPic: UITextField!
+    @IBOutlet weak var txtTitle: UITextField!
+    @IBOutlet weak var txtBody: UITextView!
+    
     @IBOutlet weak var menuButton: UIButton!
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -30,33 +29,23 @@ class CreateClubViewController: UIViewController, UITableViewDelegate {
         
     }
     
-    @IBAction func createClub(sender: AnyObject) {
+    @IBAction func createPost(sender: AnyObject) {
         let headers = [
             "Content-Type":"application/json"
         ]
-        var ownerId = 0
-        
-        if let id = defaults.stringForKey("id"){
-            ownerId = id.toInt()!
-        }
+        var clubId = 0
         
         
-        let name = txtName.text
-        let tagline = txtTagline.text
-        let description = txtDescription.text
-        let pic = txtPic.text
+        let title = txtTitle.text
+        let body = txtBody.text
         
         var jsonBody = [
-            "ownerId":ownerId,
-            "name": name,
-            "tagline":tagline,
-            "description":description,
-            "profilePicUrl":pic
+            "title": title,
+            "body":body
         ]
         
-        
         // Use Alamofire to make POST request
-        request(.POST, "http://52.3.178.99:3000/club/save", parameters: [:], encoding: .Custom({
+        request(.POST, "http://52.3.178.99:3000/club/post/\(clubId)", parameters: [:], encoding: .Custom({
             (convertible, params) in
             var mutableRequest = convertible.URLRequest.copy() as! NSMutableURLRequest
             mutableRequest.HTTPBody = JSON(jsonBody).rawData()
@@ -66,7 +55,7 @@ class CreateClubViewController: UIViewController, UITableViewDelegate {
                 println(response)
         }
         
-
+        
     }
     
     
