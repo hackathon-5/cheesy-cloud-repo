@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E68A3711B9130C5007674B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E68A3701B9130C5007674B9 /* AppDelegate.swift */; };
+		2E68A3731B9130C5007674B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E68A3721B9130C5007674B9 /* ViewController.swift */; };
+		2E68A3761B9130C5007674B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E68A3741B9130C5007674B9 /* Main.storyboard */; };
+		2E68A3781B9130C5007674B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E68A3771B9130C5007674B9 /* Images.xcassets */; };
+		2E68A37B1B9130C5007674B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E68A3791B9130C5007674B9 /* LaunchScreen.xib */; };
+		2E68A3871B9130C5007674B9 /* MiniFridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E68A3861B9130C5007674B9 /* MiniFridgeTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E68A3811B9130C5007674B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E68A3631B9130C5007674B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E68A36A1B9130C5007674B9;
+			remoteInfo = MiniFridge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E68A36B1B9130C5007674B9 /* MiniFridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniFridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E68A36F1B9130C5007674B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E68A3701B9130C5007674B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2E68A3721B9130C5007674B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2E68A3751B9130C5007674B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E68A3771B9130C5007674B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2E68A37A1B9130C5007674B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2E68A3801B9130C5007674B9 /* MiniFridgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniFridgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E68A3851B9130C5007674B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E68A3861B9130C5007674B9 /* MiniFridgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniFridgeTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E68A3681B9130C5007674B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E68A37D1B9130C5007674B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E68A3621B9130C5007674B9 = {
+			isa = PBXGroup;
+			children = (
+				2E68A36D1B9130C5007674B9 /* MiniFridge */,
+				2E68A3831B9130C5007674B9 /* MiniFridgeTests */,
+				2E68A36C1B9130C5007674B9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E68A36C1B9130C5007674B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E68A36B1B9130C5007674B9 /* MiniFridge.app */,
+				2E68A3801B9130C5007674B9 /* MiniFridgeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E68A36D1B9130C5007674B9 /* MiniFridge */ = {
+			isa = PBXGroup;
+			children = (
+				2E68A3701B9130C5007674B9 /* AppDelegate.swift */,
+				2E68A3721B9130C5007674B9 /* ViewController.swift */,
+				2E68A3741B9130C5007674B9 /* Main.storyboard */,
+				2E68A3771B9130C5007674B9 /* Images.xcassets */,
+				2E68A3791B9130C5007674B9 /* LaunchScreen.xib */,
+				2E68A36E1B9130C5007674B9 /* Supporting Files */,
+			);
+			path = MiniFridge;
+			sourceTree = "<group>";
+		};
+		2E68A36E1B9130C5007674B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E68A36F1B9130C5007674B9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E68A3831B9130C5007674B9 /* MiniFridgeTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E68A3861B9130C5007674B9 /* MiniFridgeTests.swift */,
+				2E68A3841B9130C5007674B9 /* Supporting Files */,
+			);
+			path = MiniFridgeTests;
+			sourceTree = "<group>";
+		};
+		2E68A3841B9130C5007674B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E68A3851B9130C5007674B9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E68A36A1B9130C5007674B9 /* MiniFridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E68A38A1B9130C5007674B9 /* Build configuration list for PBXNativeTarget "MiniFridge" */;
+			buildPhases = (
+				2E68A3671B9130C5007674B9 /* Sources */,
+				2E68A3681B9130C5007674B9 /* Frameworks */,
+				2E68A3691B9130C5007674B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiniFridge;
+			productName = MiniFridge;
+			productReference = 2E68A36B1B9130C5007674B9 /* MiniFridge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E68A37F1B9130C5007674B9 /* MiniFridgeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E68A38D1B9130C5007674B9 /* Build configuration list for PBXNativeTarget "MiniFridgeTests" */;
+			buildPhases = (
+				2E68A37C1B9130C5007674B9 /* Sources */,
+				2E68A37D1B9130C5007674B9 /* Frameworks */,
+				2E68A37E1B9130C5007674B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E68A3821B9130C5007674B9 /* PBXTargetDependency */,
+			);
+			name = MiniFridgeTests;
+			productName = MiniFridgeTests;
+			productReference = 2E68A3801B9130C5007674B9 /* MiniFridgeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E68A3631B9130C5007674B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = CheesyCloud;
+				TargetAttributes = {
+					2E68A36A1B9130C5007674B9 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					2E68A37F1B9130C5007674B9 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 2E68A36A1B9130C5007674B9;
+					};
+				};
+			};
+			buildConfigurationList = 2E68A3661B9130C5007674B9 /* Build configuration list for PBXProject "MiniFridge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E68A3621B9130C5007674B9;
+			productRefGroup = 2E68A36C1B9130C5007674B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E68A36A1B9130C5007674B9 /* MiniFridge */,
+				2E68A37F1B9130C5007674B9 /* MiniFridgeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E68A3691B9130C5007674B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E68A3761B9130C5007674B9 /* Main.storyboard in Resources */,
+				2E68A37B1B9130C5007674B9 /* LaunchScreen.xib in Resources */,
+				2E68A3781B9130C5007674B9 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E68A37E1B9130C5007674B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E68A3671B9130C5007674B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E68A3731B9130C5007674B9 /* ViewController.swift in Sources */,
+				2E68A3711B9130C5007674B9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E68A37C1B9130C5007674B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E68A3871B9130C5007674B9 /* MiniFridgeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E68A3821B9130C5007674B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E68A36A1B9130C5007674B9 /* MiniFridge */;
+			targetProxy = 2E68A3811B9130C5007674B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2E68A3741B9130C5007674B9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E68A3751B9130C5007674B9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2E68A3791B9130C5007674B9 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E68A37A1B9130C5007674B9 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E68A3881B9130C5007674B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2E68A3891B9130C5007674B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E68A38B1B9130C5007674B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MiniFridge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2E68A38C1B9130C5007674B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MiniFridge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2E68A38E1B9130C5007674B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MiniFridgeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniFridge.app/MiniFridge";
+			};
+			name = Debug;
+		};
+		2E68A38F1B9130C5007674B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MiniFridgeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniFridge.app/MiniFridge";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E68A3661B9130C5007674B9 /* Build configuration list for PBXProject "MiniFridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E68A3881B9130C5007674B9 /* Debug */,
+				2E68A3891B9130C5007674B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E68A38A1B9130C5007674B9 /* Build configuration list for PBXNativeTarget "MiniFridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E68A38B1B9130C5007674B9 /* Debug */,
+				2E68A38C1B9130C5007674B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2E68A38D1B9130C5007674B9 /* Build configuration list for PBXNativeTarget "MiniFridgeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E68A38E1B9130C5007674B9 /* Debug */,
+				2E68A38F1B9130C5007674B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E68A3631B9130C5007674B9 /* Project object */;
+}
