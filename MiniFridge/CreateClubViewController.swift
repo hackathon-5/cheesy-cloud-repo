@@ -17,7 +17,6 @@ class CreateClubViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtTagline: UITextField!
     @IBOutlet weak var txtDescription: UITextField!
-    @IBOutlet weak var txtPic: UITextField!
     @IBOutlet weak var menuButton: UIButton!
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -44,14 +43,12 @@ class CreateClubViewController: UIViewController, UITableViewDelegate {
         let name = txtName.text
         let tagline = txtTagline.text
         let description = txtDescription.text
-        let pic = txtPic.text
         
         var jsonBody = [
             "ownerId":ownerId,
             "name": name,
             "tagline":tagline,
-            "description":description,
-            "profilePicUrl":pic
+            "description":description
         ]
         
         

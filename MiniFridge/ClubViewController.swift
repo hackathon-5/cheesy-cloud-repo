@@ -26,20 +26,9 @@ class ClubViewController: UIViewController, UITableViewDelegate, UITableViewData
         tagline.text = club.tagline
         clubDescription.text = club.description
         
-        println(club.members[0].name)
-        
-        self.memberTableView.reloadData()
-    
-//        if let url = NSURL(string: club.profilePicUrl) {
-//            if let data = NSData(contentsOfURL: url){
-//                image.contentMode = UIViewContentMode.ScaleAspectFill
-//                image.image = UIImage(data: data)
-//                image.layer.cornerRadius = self.image.frame.size.width / 2;
-//                image.clipsToBounds = true
-//                image.layer.borderWidth = 1
-//                image.layer.borderColor = UIColor.whiteColor().CGColor
-//            }
-//        }
+        memberTableView.delegate = self
+        memberTableView.dataSource = self
+
         
     }
     
@@ -63,7 +52,7 @@ class ClubViewController: UIViewController, UITableViewDelegate, UITableViewData
         var cell:MemberCell = tableView.dequeueReusableCellWithIdentifier("MemberCell") as! MemberCell
         cell.backgroundColor = UIColor.clearColor()
         cell.name.text = club.members[indexPath.row].name
-        
         return cell
     }
+    
 }
