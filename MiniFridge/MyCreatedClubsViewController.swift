@@ -72,7 +72,7 @@ class MyCreatedClubsViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var selectedCell:MyClubCell = tableView.cellForRowAtIndexPath(indexPath)! as! MyClubCell
+        var selectedCell:MyCreatedClubCell = tableView.cellForRowAtIndexPath(indexPath)! as! MyCreatedClubCell
         selectedCell.contentView.backgroundColor = UIColor(red: 28/255, green: 92/255, blue: 112/255, alpha: 1)
         //self.performSegueWithIdentifier(options[indexPath.row].segueName, sender: self)
         
@@ -81,6 +81,21 @@ class MyCreatedClubsViewController: UIViewController, UITableViewDelegate, UITab
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(tableView: UITableView,
+        commitEditingStyle editingStyle: UITableViewCellEditingStyle,
+        forRowAtIndexPath indexPath: NSIndexPath) {
+            switch editingStyle {
+            case .Delete:
+                // remove the deleted item from the model
+                self.myClubs.removeAtIndex(indexPath.row)
+                
+                // remove the deleted item from the `UITableView`
+                self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            default:
+                return
+            }
     }
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath){
