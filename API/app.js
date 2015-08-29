@@ -13,7 +13,7 @@ var mongoose = require('mongoose');
 var app = express();
 
 //connect to the mongo db
-mongoose.createConnection('mongodb://localhost:27017/miniFridge');
+mongoose.createConnection('mongodb://mongoHost:27017/miniFridge');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
