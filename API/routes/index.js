@@ -181,7 +181,9 @@ router.get('/clubsByRegistered/:id/posts', function(req, res) {
             var posts = [];
             for(var i = 0; i< clubs.length; i++){
                 for(var j = 0; j< clubs[i].posts.length; j++){
-                    posts.push(clubs[i].posts[j]);
+                    var post = clubs[i].posts[j];
+                    post.club = clubs[i].name;
+                    posts.push(post);
                 }
             }
 
