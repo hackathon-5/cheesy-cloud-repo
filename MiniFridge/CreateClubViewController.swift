@@ -1,3 +1,4 @@
+
 //
 //  CreateClubViewController.swift
 //  MiniFridge
@@ -11,7 +12,12 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 
 class CreateClubViewController: UIViewController, UITableViewDelegate {
+    let defaults = NSUserDefaults.standardUserDefaults();
     
+    @IBOutlet weak var txtName: UITextField!
+    @IBOutlet weak var txtTagline: UITextField!
+    @IBOutlet weak var txtDescription: UITextField!
+    @IBOutlet weak var txtPic: UITextField!
     @IBOutlet weak var menuButton: UIButton!
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -23,6 +29,47 @@ class CreateClubViewController: UIViewController, UITableViewDelegate {
         
         
     }
+    
+    @IBAction func createClub(sender: AnyObject) {
+        let headers = [
+            "Content-Type":"application/json"
+        ]
+        var ownerId = 0
+        
+        if let id = defaults.stringForKey("id"){
+            ownerId = id.toInt()!
+        }
+        
+        
+        let name = txtName.text
+        let tagline = txtTagline.text
+        let description = txtDescription.text
+        let pic = txtPic.text
+        
+        var jsonBody = [
+            "ownerId":ownerId,
+            "name": name,
+            "tagline":tagline,
+            "description":description,
+            "profilePicUrl":pic
+        ]
+        
+        println(jsonBody)
+        
+        // Use Alamofire to make POST request
+        request(.POST, "http://52.3.178.99:3000/club/save", parameters: [:], encoding: .Custom({
+            (convertible, params) in
+            var mutableRequest = convertible.URLRequest.copy() as! NSMutableURLRequest
+            mutableRequest.HTTPBody = JSON(jsonBody).rawData()
+            return (mutableRequest, nil)
+        }), headers:headers)
+            .responseString { [weak self] request, response, string, error in
+                println(response)
+        }
+        
+
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
