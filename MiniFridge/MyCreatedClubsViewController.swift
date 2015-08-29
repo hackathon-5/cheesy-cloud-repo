@@ -14,7 +14,7 @@ import FBSDKLoginKit
 class MyCreatedClubsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let defaults = NSUserDefaults.standardUserDefaults();
-    var myClubs = [String]()
+    var myClubs = [Club]()
     
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -41,10 +41,19 @@ class MyCreatedClubsViewController: UIViewController, UITableViewDelegate, UITab
         // Make request
         request(.GET, "http://52.3.178.99:3000/clubsByOwner/\(userId)")
             .responseJSON { (request, response, data, error) in
+                println(data)
                 var json = JSON(data!)
+                var members = [Member]()
                 for (key, club) in json {
+                    let id = club["_id"].stringValue
                     let name = club["name"].stringValue
-                    self.myClubs.append(name)
+                    let description = club["description"].stringValue
+                    let profilePicUrl = club["profilePicUrl"].stringValue
+                    let tagline = club["tagline"].stringValue
+                    for(k, member) in club["members"]{
+                        members.append(Member(name: member["name"].stringValue, facebookPicture: member["facebook"].stringValue, id: member["id"].stringValue))
+                    }
+                    self.myClubs.append(Club(id: id, name: name, description: description, profilePicUrl: profilePicUrl, tagline: tagline, members: members))
                 }
                 self.tableView.reloadData()
         }
@@ -66,7 +75,7 @@ class MyCreatedClubsViewController: UIViewController, UITableViewDelegate, UITab
         
         var cell:MyCreatedClubCell = tableView.dequeueReusableCellWithIdentifier("MyCreatedClubCell") as! MyCreatedClubCell
         cell.backgroundColor = UIColor.clearColor()
-        cell.clubTitle.text = myClubs[indexPath.row]
+        cell.clubTitle.text = myClubs[indexPath.row].name
         
         return cell
     }
@@ -74,7 +83,7 @@ class MyCreatedClubsViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var selectedCell:MyCreatedClubCell = tableView.cellForRowAtIndexPath(indexPath)! as! MyCreatedClubCell
         selectedCell.contentView.backgroundColor = UIColor(red: 28/255, green: 92/255, blue: 112/255, alpha: 1)
-        //self.performSegueWithIdentifier(options[indexPath.row].segueName, sender: self)
+        self.performSegueWithIdentifier("showQRCode", sender: self)
         
     }
     
@@ -88,8 +97,16 @@ class MyCreatedClubsViewController: UIViewController, UITableViewDelegate, UITab
         forRowAtIndexPath indexPath: NSIndexPath) {
             switch editingStyle {
             case .Delete:
+                var club = myClubs[indexPath.row].id
                 // remove the deleted item from the model
                 self.myClubs.removeAtIndex(indexPath.row)
+                
+                // Make request
+                request(.GET, "http://52.3.178.99:3000/club/delete/\(club)")
+                    .responseJSON { (request, response, data, error) in
+                        println("deleted")
+                        
+                }
                 
                 // remove the deleted item from the `UITableView`
                 self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
@@ -115,6 +132,16 @@ class MyCreatedClubsViewController: UIViewController, UITableViewDelegate, UITab
             cell.layoutMargins = UIEdgeInsetsZero
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
+        if segue!.identifier == "showQRCode" {
+            let viewController:ShowQRCode = segue!.destinationViewController as! ShowQRCode
+            let indexPath = self.tableView.indexPathForSelectedRow()
+            viewController.club = self.myClubs[indexPath!.row]
+        }
+        
+    }
+
     
     
     

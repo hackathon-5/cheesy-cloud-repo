@@ -17,6 +17,7 @@ struct Member{
 }
 
 struct Club{
+    var id: String!
     var name: String!
     var description: String!
     var profilePicUrl: String!
@@ -60,6 +61,7 @@ class MyClubsViewController: UIViewController, UITableViewDelegate, UITableViewD
                 var json = JSON(data!)
                 var members = [Member]()
                 for (key, club) in json {
+                    let id = club["_id"].stringValue
                     let name = club["name"].stringValue
                     let description = club["description"].stringValue
                     let profilePicUrl = club["profilePicUrl"].stringValue
@@ -67,7 +69,7 @@ class MyClubsViewController: UIViewController, UITableViewDelegate, UITableViewD
                     for(k, member) in club["members"]{
                         members.append(Member(name: member["name"].stringValue, facebookPicture: member["facebook"].stringValue, id: member["id"].stringValue))
                     }
-                    self.myClubs.append(Club(name: name, description: description, profilePicUrl: profilePicUrl, tagline: tagline, members: members))
+                    self.myClubs.append(Club(id: id, name: name, description: description, profilePicUrl: profilePicUrl, tagline: tagline, members: members))
                 }
                 self.tableView.reloadData()
         }

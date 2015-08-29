@@ -207,6 +207,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="clubTitle" destination="PEy-8n-M68" id="QzW-or-2yQ"/>
                                         </connections>
@@ -389,9 +390,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dark-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="HbR-U3-4za">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BqH-m7-S76">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BqH-m7-S76">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCreatedClubCell" rowHeight="75" id="1aA-Hq-WCF" customClass="MyCreatedClubCell" customModule="MiniFridge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -407,6 +409,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="clubTitle" destination="FN2-90-mO2" id="9JO-vK-bcV"/>
                                         </connections>
@@ -419,6 +422,10 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="BqH-m7-S76" secondAttribute="trailing" id="Gpa-wl-sMk"/>
+                            <constraint firstItem="BqH-m7-S76" firstAttribute="leading" secondItem="pYk-hS-94m" secondAttribute="leadingMargin" id="TEJ-y2-jON"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="t6p-jb-by0">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="rPO-Wv-cyG">
@@ -434,11 +441,98 @@
                     <connections>
                         <outlet property="menuButton" destination="fXB-jr-5dt" id="ZmS-7P-OKe"/>
                         <outlet property="tableView" destination="BqH-m7-S76" id="N8o-Jg-fQ6"/>
+                        <segue destination="M7Z-KS-zfU" kind="show" identifier="showQRCode" id="Uhd-Nb-9DO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ncn-Fj-sRI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2075" y="396"/>
+        </scene>
+        <!--ShowQR Code-->
+        <scene sceneID="Nmz-z6-58T">
+            <objects>
+                <viewController id="M7Z-KS-zfU" customClass="ShowQRCode" customModule="MiniFridge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R9l-AR-9Mm"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKR-Mi-Or4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QGL-en-W9n">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="dark-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="P4m-N2-nLm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBn-xp-2tl">
+                                <rect key="frame" x="124" y="90" width="352" height="71"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dgk-NI-1jo">
+                                <rect key="frame" x="152" y="169" width="296" height="289"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="289" id="06g-JE-BmT"/>
+                                    <constraint firstAttribute="width" constant="296" id="4px-y4-qbx"/>
+                                    <constraint firstAttribute="height" constant="289" id="XtM-oy-OQO"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="XtM-oy-OQO"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="06g-JE-BmT"/>
+                                        <exclude reference="4px-y4-qbx"/>
+                                        <include reference="XtM-oy-OQO"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FKR-Mi-Or4" firstAttribute="top" secondItem="dgk-NI-1jo" secondAttribute="bottom" constant="142" id="3PV-SU-EfT"/>
+                            <constraint firstItem="dgk-NI-1jo" firstAttribute="top" secondItem="aBn-xp-2tl" secondAttribute="bottom" constant="8" symbolic="YES" id="5oK-Du-AIe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aBn-xp-2tl" secondAttribute="trailing" id="7yk-MY-tqT"/>
+                            <constraint firstItem="aBn-xp-2tl" firstAttribute="leading" secondItem="QGL-en-W9n" secondAttribute="leadingMargin" id="AgN-oJ-U9x"/>
+                            <constraint firstItem="dgk-NI-1jo" firstAttribute="centerX" secondItem="aBn-xp-2tl" secondAttribute="centerX" id="DoV-Nq-sSE"/>
+                            <constraint firstItem="aBn-xp-2tl" firstAttribute="top" secondItem="R9l-AR-9Mm" secondAttribute="bottom" constant="15" id="Ig1-ee-DVf"/>
+                            <constraint firstItem="dgk-NI-1jo" firstAttribute="centerX" secondItem="P4m-N2-nLm" secondAttribute="centerX" id="Llz-bj-ZhR"/>
+                            <constraint firstItem="dgk-NI-1jo" firstAttribute="leading" secondItem="QGL-en-W9n" secondAttribute="leadingMargin" constant="36" id="SrN-3g-Iyv"/>
+                            <constraint firstItem="dgk-NI-1jo" firstAttribute="top" secondItem="aBn-xp-2tl" secondAttribute="bottom" constant="8" symbolic="YES" id="b3M-cl-dy8"/>
+                            <constraint firstItem="FKR-Mi-Or4" firstAttribute="top" secondItem="dgk-NI-1jo" secondAttribute="bottom" constant="142" id="kCb-S4-O5P"/>
+                            <constraint firstItem="dgk-NI-1jo" firstAttribute="centerX" secondItem="aBn-xp-2tl" secondAttribute="centerX" id="r6A-P9-vlV"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="SrN-3g-Iyv"/>
+                                <exclude reference="b3M-cl-dy8"/>
+                                <exclude reference="r6A-P9-vlV"/>
+                                <exclude reference="3PV-SU-EfT"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="5oK-Du-AIe"/>
+                                <exclude reference="DoV-Nq-sSE"/>
+                                <exclude reference="Llz-bj-ZhR"/>
+                                <include reference="SrN-3g-Iyv"/>
+                                <include reference="b3M-cl-dy8"/>
+                                <include reference="r6A-P9-vlV"/>
+                                <include reference="3PV-SU-EfT"/>
+                                <exclude reference="kCb-S4-O5P"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="clubTitle" destination="aBn-xp-2tl" id="iWw-ha-VgH"/>
+                        <outlet property="imageView" destination="dgk-NI-1jo" id="Sg7-b8-7jI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rdG-Ju-1en" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2841" y="396"/>
         </scene>
         <!--Sidebar Controller-->
         <scene sceneID="y79-eT-KcI">
