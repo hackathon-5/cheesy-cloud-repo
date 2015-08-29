@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NavigationController.swift
 //  MiniFridge
 //
 //  Created by Tony Winters on 8/28/15.
@@ -8,18 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class NavigationController: UINavigationController, UIViewControllerTransitioningDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.navigationBar.barTintColor = UIColor.clearColor()
+        self.navigationBar.tintColor = UIColor.whiteColor()
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
 }
-

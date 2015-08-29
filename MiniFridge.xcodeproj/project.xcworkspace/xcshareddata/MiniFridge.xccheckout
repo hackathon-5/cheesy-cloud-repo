@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>38FECBDA-764E-45A9-BEDD-792BD257BA16</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MiniFridge</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>934141F9AA3FFABE4217B68540418BC1B49E9B19</key>
+		<string>https://github.com/hackathon-5/cheesy-cloud-repo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MiniFridge.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>934141F9AA3FFABE4217B68540418BC1B49E9B19</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/hackathon-5/cheesy-cloud-repo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>934141F9AA3FFABE4217B68540418BC1B49E9B19</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>934141F9AA3FFABE4217B68540418BC1B49E9B19</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MiniFridge</string>
+		</dict>
+	</array>
+</dict>
+</plist>
