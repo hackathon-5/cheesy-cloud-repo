@@ -41,7 +41,6 @@ class MyCreatedClubsViewController: UIViewController, UITableViewDelegate, UITab
         // Make request
         request(.GET, "http://52.3.178.99:3000/clubsByOwner/\(userId)")
             .responseJSON { (request, response, data, error) in
-                println(data)
                 var json = JSON(data!)
                 var members = [Member]()
                 for (key, club) in json {

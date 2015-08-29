@@ -9,10 +9,11 @@
 import UIKit
 
 
-class ClubViewController: UIViewController {
+class ClubViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let defaults = NSUserDefaults.standardUserDefaults()
     var club:Club!
+    @IBOutlet weak var memberTableView: UITableView!
     
     //@IBOutlet weak var image: UIImageView!
     @IBOutlet weak var tagline: UILabel!
@@ -25,6 +26,10 @@ class ClubViewController: UIViewController {
         tagline.text = club.tagline
         clubDescription.text = club.description
         
+        println(club.members[0].name)
+        
+        self.memberTableView.reloadData()
+    
 //        if let url = NSURL(string: club.profilePicUrl) {
 //            if let data = NSData(contentsOfURL: url){
 //                image.contentMode = UIViewContentMode.ScaleAspectFill
@@ -41,5 +46,24 @@ class ClubViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(tableView:UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return club.members.count
+    }
+    
+    func numberOfSectionsInTableView(tableView:UITableView) -> Int {
+        
+        return 1
+    }
+    
+    func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
+        
+        var cell:MemberCell = tableView.dequeueReusableCellWithIdentifier("MemberCell") as! MemberCell
+        cell.backgroundColor = UIColor.clearColor()
+        cell.name.text = club.members[indexPath.row].name
+        
+        return cell
     }
 }
