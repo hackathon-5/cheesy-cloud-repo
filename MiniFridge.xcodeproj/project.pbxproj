@@ -34,6 +34,19 @@
 		2E68A3A01B91522C007674B9 /* minifridge_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E68A39F1B91522C007674B9 /* minifridge_logo.png */; };
 		2E68A3A51B9155C1007674B9 /* SidebarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E68A3A41B9155C1007674B9 /* SidebarCell.swift */; };
 		2E68A3A71B9157CD007674B9 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E68A3A61B9157CD007674B9 /* NavigationController.swift */; };
+		2E8E27171B9194B000C54F82 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E270D1B9194B000C54F82 /* Alamofire.swift */; };
+		2E8E27181B9194B000C54F82 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E270E1B9194B000C54F82 /* Download.swift */; };
+		2E8E27191B9194B000C54F82 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E270F1B9194B000C54F82 /* Manager.swift */; };
+		2E8E271A1B9194B000C54F82 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E27101B9194B000C54F82 /* MultipartFormData.swift */; };
+		2E8E271B1B9194B000C54F82 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E27111B9194B000C54F82 /* ParameterEncoding.swift */; };
+		2E8E271C1B9194B000C54F82 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E27121B9194B000C54F82 /* Request.swift */; };
+		2E8E271D1B9194B000C54F82 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E27131B9194B000C54F82 /* ResponseSerialization.swift */; };
+		2E8E271E1B9194B000C54F82 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E27141B9194B000C54F82 /* ServerTrustPolicy.swift */; };
+		2E8E271F1B9194B000C54F82 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E27151B9194B000C54F82 /* Upload.swift */; };
+		2E8E27201B9194B000C54F82 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E27161B9194B000C54F82 /* Validation.swift */; };
+		2E8E27221B9194D700C54F82 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E27211B9194D700C54F82 /* SwiftyJSON.swift */; };
+		2E8E27241B919B7700C54F82 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E8E27231B919B7700C54F82 /* splash.png */; };
+		2E8E27281B91A0DE00C54F82 /* MyClubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E27271B91A0DE00C54F82 /* MyClubCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +93,20 @@
 		2E68A39F1B91522C007674B9 /* minifridge_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minifridge_logo.png; sourceTree = "<group>"; };
 		2E68A3A41B9155C1007674B9 /* SidebarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarCell.swift; sourceTree = "<group>"; };
 		2E68A3A61B9157CD007674B9 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		2E8E270C1B9194B000C54F82 /* Alamofire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alamofire.h; sourceTree = "<group>"; };
+		2E8E270D1B9194B000C54F82 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		2E8E270E1B9194B000C54F82 /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
+		2E8E270F1B9194B000C54F82 /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		2E8E27101B9194B000C54F82 /* MultipartFormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
+		2E8E27111B9194B000C54F82 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		2E8E27121B9194B000C54F82 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		2E8E27131B9194B000C54F82 /* ResponseSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSerialization.swift; sourceTree = "<group>"; };
+		2E8E27141B9194B000C54F82 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		2E8E27151B9194B000C54F82 /* Upload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Upload.swift; sourceTree = "<group>"; };
+		2E8E27161B9194B000C54F82 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		2E8E27211B9194D700C54F82 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		2E8E27231B919B7700C54F82 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		2E8E27271B91A0DE00C54F82 /* MyClubCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClubCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,13 +130,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2E360A591B91924E00D720D7 /* alamofire */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = alamofire;
-			sourceTree = "<group>";
-		};
 		2E68A3621B9130C5007674B9 = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +210,7 @@
 		2E68A3A11B9152CD007674B9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2E8E27231B919B7700C54F82 /* splash.png */,
 				2E360A491B917E4900D720D7 /* clubListBackground.png */,
 				2E360A4D1B91875500D720D7 /* clubs.png */,
 				2E360A4E1B91875500D720D7 /* home.png */,
@@ -207,7 +228,18 @@
 		2E68A3A21B915364007674B9 /* utilities */ = {
 			isa = PBXGroup;
 			children = (
-				2E360A591B91924E00D720D7 /* alamofire */,
+				2E8E270C1B9194B000C54F82 /* Alamofire.h */,
+				2E8E270D1B9194B000C54F82 /* Alamofire.swift */,
+				2E8E270E1B9194B000C54F82 /* Download.swift */,
+				2E8E270F1B9194B000C54F82 /* Manager.swift */,
+				2E8E27101B9194B000C54F82 /* MultipartFormData.swift */,
+				2E8E27111B9194B000C54F82 /* ParameterEncoding.swift */,
+				2E8E27121B9194B000C54F82 /* Request.swift */,
+				2E8E27131B9194B000C54F82 /* ResponseSerialization.swift */,
+				2E8E27141B9194B000C54F82 /* ServerTrustPolicy.swift */,
+				2E8E27211B9194D700C54F82 /* SwiftyJSON.swift */,
+				2E8E27151B9194B000C54F82 /* Upload.swift */,
+				2E8E27161B9194B000C54F82 /* Validation.swift */,
 				2E68A3981B913F94007674B9 /* SWRevealViewController.h */,
 				2E68A3991B913F94007674B9 /* SWRevealViewController.m */,
 			);
@@ -218,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				2E68A3A41B9155C1007674B9 /* SidebarCell.swift */,
+				2E8E27271B91A0DE00C54F82 /* MyClubCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -310,6 +343,7 @@
 				2E360A4C1B9184C400D720D7 /* hamburger (1).png in Resources */,
 				2E360A511B91875500D720D7 /* clubs.png in Resources */,
 				2E360A541B91875500D720D7 /* pencil.png in Resources */,
+				2E8E27241B919B7700C54F82 /* splash.png in Resources */,
 				2E68A3761B9130C5007674B9 /* Main.storyboard in Resources */,
 				2E360A441B916BC800D720D7 /* sign_out.png in Resources */,
 				2E68A37B1B9130C5007674B9 /* LaunchScreen.xib in Resources */,
@@ -333,14 +367,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E68A39C1B91405B007674B9 /* SidebarController.swift in Sources */,
+				2E8E271C1B9194B000C54F82 /* Request.swift in Sources */,
 				2E68A3731B9130C5007674B9 /* LoginViewController.swift in Sources */,
+				2E8E271A1B9194B000C54F82 /* MultipartFormData.swift in Sources */,
 				2E360A581B918A9900D720D7 /* SignupViewController.swift in Sources */,
+				2E8E271F1B9194B000C54F82 /* Upload.swift in Sources */,
 				2E68A3711B9130C5007674B9 /* AppDelegate.swift in Sources */,
+				2E8E27281B91A0DE00C54F82 /* MyClubCell.swift in Sources */,
 				2E360A561B918A8900D720D7 /* CreateClubViewController.swift in Sources */,
 				2E68A39A1B913F94007674B9 /* SWRevealViewController.m in Sources */,
 				2E68A3A51B9155C1007674B9 /* SidebarCell.swift in Sources */,
+				2E8E271E1B9194B000C54F82 /* ServerTrustPolicy.swift in Sources */,
+				2E8E271D1B9194B000C54F82 /* ResponseSerialization.swift in Sources */,
+				2E8E27221B9194D700C54F82 /* SwiftyJSON.swift in Sources */,
+				2E8E27191B9194B000C54F82 /* Manager.swift in Sources */,
 				2E68A3A71B9157CD007674B9 /* NavigationController.swift in Sources */,
+				2E8E27171B9194B000C54F82 /* Alamofire.swift in Sources */,
+				2E8E27181B9194B000C54F82 /* Download.swift in Sources */,
+				2E8E271B1B9194B000C54F82 /* ParameterEncoding.swift in Sources */,
 				2E68A39E1B9147E6007674B9 /* MyClubsViewController.swift in Sources */,
+				2E8E27201B9194B000C54F82 /* Validation.swift in Sources */,
 				2E360A481B91765D00D720D7 /* MyCreatedClubsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

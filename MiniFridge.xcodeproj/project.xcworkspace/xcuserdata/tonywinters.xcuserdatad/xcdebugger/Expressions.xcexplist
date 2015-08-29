@@ -3,14 +3,6 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "MiniFridge.LoginViewController.(getFBUserData (MiniFridge.LoginViewController) -&gt; () -&gt; ()).(closure #1):LoginViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "result[&quot;email&quot;]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "MiniFridge.AppDelegate.application (MiniFridge.AppDelegate)(ObjectiveC.UIApplication, didFinishLaunchingWithOptions : Swift.Optional&lt;Swift.Dictionary&lt;ObjectiveC.NSObject, Swift.AnyObject&gt;&gt;) -&gt; Swift.Bool:AppDelegate.swift">
          <PersistentStrings>
             <PersistentString
@@ -19,10 +11,29 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "MiniFridge.LoginViewController.(getFBUserData (MiniFridge.LoginViewController) -&gt; () -&gt; ()).(closure #1):LoginViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "result[&quot;email&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "MiniFridge.LoginViewController.viewDidAppear (MiniFridge.LoginViewController)(Swift.Bool) -&gt; ():LoginViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "FBSDKAccessToken.currentAccessToken().userID">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MiniFridge.MyClubsViewController.(viewDidLoad (MiniFridge.MyClubsViewController) -&gt; () -&gt; ()).(closure #1):MyClubsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "club[&quot;name&quot;].stringValue">
+            </PersistentString>
+            <PersistentString
+               value = "data">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

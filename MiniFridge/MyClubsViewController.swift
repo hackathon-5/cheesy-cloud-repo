@@ -12,10 +12,13 @@ import FBSDKLoginKit
 
 class MyClubsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    let defaults = NSUserDefaults.standardUserDefaults();
+
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var menuButton: UIButton!
     
-    var myClubs = []
+    var myClubs = [String]()
     
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -28,6 +31,23 @@ class MyClubsViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.separatorColor = UIColor(red: 180, green: 180, blue: 180, alpha: 30)
         tableView.delegate = self
         tableView.dataSource = self
+        
+        var userId = ""
+        
+        if let id = defaults.stringForKey("id"){
+            userId = id
+        }
+        
+        // Make request
+        request(.GET, "http://52.3.178.99:3000/clubsByRegistered/\(userId)")
+            .responseJSON { (request, response, data, error) in
+                var json = JSON(data!)
+                for (key, club) in json {
+                    let name = club["name"].stringValue
+                    self.myClubs.append(name)
+                }
+                self.tableView.reloadData()
+        }
    
     }
     
@@ -49,9 +69,9 @@ class MyClubsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
         
-        var cell:SidebarCell = tableView.dequeueReusableCellWithIdentifier("SidebarCell") as! SidebarCell
+        var cell:MyClubCell = tableView.dequeueReusableCellWithIdentifier("MyClubCell") as! MyClubCell
         cell.backgroundColor = UIColor.clearColor()
-        //cell.title.text = options[indexPath.row].name
+        cell.clubTitle.text = myClubs[indexPath.row]
         
         return cell
     }

@@ -49,6 +49,7 @@ class LoginViewController: UIViewController {
                     if let picture = result.objectForKey("picture"){
                         if let data = picture.objectForKey("data"){
                             if let imageUrl = data.objectForKey("url"){
+                                self.defaults.setObject(imageUrl, forKey:"imageUrl")
                                 if let url = NSURL(string: imageUrl as! String) {
                                     if let data = NSData(contentsOfURL: url){
                                         self.defaults.setObject(data, forKey: "image")

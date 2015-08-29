@@ -14,6 +14,7 @@ class SignupViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var menuButton: UIButton!
+    let defaults = NSUserDefaults.standardUserDefaults();
 
     
     
@@ -108,24 +109,7 @@ class SignupViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                     detectionString = (metadata as! AVMetadataMachineReadableCodeObject).stringValue
                     self.session.stopRunning()
                     
-                    if detectionString.toInt() != nil {
-                        valid = true
-                        break
-                    } else {
-                        var alert = UIAlertController(title: "Error", message: "Invalid QR Code", preferredStyle: UIAlertControllerStyle.Alert)
-                        alert.addAction(UIAlertAction(title: "Close", style: .Default, handler: { action in
-                            switch action.style{
-                            case .Default:
-                                self.closeView()
-                            case .Cancel:
-                                println("cancel")
-                                
-                            case .Destructive:
-                                println("destructive")
-                            }
-                        }))
-                        self.presentViewController(alert, animated: true, completion: nil)
-                    }
+                    valid = true
                     
                 }
                 
@@ -152,46 +136,64 @@ class SignupViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             "clubId":clubId
         ]
         
-        // Make request
-        request(.GET, "52.52.52.52/api/es/getShipmentDetails", parameters: params)
-            .responseJSON { (req, res, json, error) in
-                if(error != nil) {
-                    var alert = UIAlertController(title: "Error", message: error!.localizedDescription, preferredStyle: UIAlertControllerStyle.Alert)
-                    alert.addAction(UIAlertAction(title: "Close", style: .Default, handler: { action in
-                        switch action.style{
-                        case .Default:
-                            self.closeView()
-                        case .Cancel:
-                            println("cancel")
-                            
-                        case .Destructive:
-                            println("destructive")
-                        }
-                    }))
-                    self.presentViewController(alert, animated: true, completion: nil)
-                }
-                else {
-                    var json = JSON(json!)
-                    let success = json["success"].boolValue
-                    if success {
-                        self.loadShipmentDetailView(json)
-                    } else {
-                        var alert = UIAlertController(title: "Error", message: "Shipment not found!", preferredStyle: UIAlertControllerStyle.Alert)
-                        alert.addAction(UIAlertAction(title: "Close", style: .Default, handler: { action in
-                            switch action.style{
-                            case .Default:
-                                self.closeView()
-                            case .Cancel:
-                                println("cancel")
-                                
-                            case .Destructive:
-                                println("destructive")
-                            }
-                        }))
-                        self.presentViewController(alert, animated: true, completion: nil)
-                    }
-                }
+//        // Make request
+//        request(.GET, "52.3.178.99:3000/api/es/getShipmentDetails", parameters: params)
+//            .responseJSON { (req, res, json, error) in
+//                if(error != nil) {
+//                    var alert = UIAlertController(title: "Error", message: error!.localizedDescription, preferredStyle: UIAlertControllerStyle.Alert)
+//                    alert.addAction(UIAlertAction(title: "Close", style: .Default, handler: { action in
+//                        switch action.style{
+//                        case .Default:
+//                            self.closeView()
+//                        case .Cancel:
+//                            println("cancel")
+//                            
+//                        case .Destructive:
+//                            println("destructive")
+//                        }
+//                    }))
+//                    self.presentViewController(alert, animated: true, completion: nil)
+//                }
+//        }
+        
+        let headers = [
+            "Content-Type":"application/json"
+        ]
+        
+        var facebookName = ""
+        var userId = ""
+        var image = ""
+        
+        if let name = defaults.stringForKey("name"){
+            facebookName = name
         }
+        
+        if let id = defaults.stringForKey("id"){
+            userId = id
+        }
+        
+        if let imageUrl = defaults.stringForKey("imageUrl"){
+            image = imageUrl
+        }
+        
+        var jsonBody = [
+            "id":userId,
+            "name": facebookName,
+            "facebook":image
+        ]
+        
+        
+        // Use Alamofire to make POST request
+        request(.POST, "http://52.3.178.99:3000/club/register/\(clubId)", parameters: [:], encoding: .Custom({
+            (convertible, params) in
+            var mutableRequest = convertible.URLRequest.copy() as! NSMutableURLRequest
+            mutableRequest.HTTPBody = JSON(jsonBody).rawData()
+            return (mutableRequest, nil)
+        }), headers:headers)
+            .responseString { [weak self] request, response, string, error in
+                println(response)
+        }
+
     }
     
     
