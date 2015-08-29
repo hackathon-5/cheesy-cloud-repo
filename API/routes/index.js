@@ -92,13 +92,6 @@ router.get('/club/delete/:id', function(req, res) {
                 res.send(JSON.stringify({success:true}))
             }
         });
-    }else{
-        res.setHeader('Content-Type', 'application/json');
-        var club = new Club(jsonClub);
-        club.save(function(err){
-
-        });
-
     }
 });
 
