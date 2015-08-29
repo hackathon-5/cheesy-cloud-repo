@@ -10,6 +10,21 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 
+struct Member{
+    var name: String!
+    var facebookPicture: String!
+    var id: String!
+}
+
+struct Club{
+    var name: String!
+    var description: String!
+    var profilePicUrl: String!
+    var tagline: String!
+    var members = [Member]()
+    
+}
+
 class MyClubsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let defaults = NSUserDefaults.standardUserDefaults();
@@ -18,7 +33,7 @@ class MyClubsViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var menuButton: UIButton!
     
-    var myClubs = [String]()
+    var myClubs = [Club]()
     
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -41,10 +56,18 @@ class MyClubsViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Make request
         request(.GET, "http://52.3.178.99:3000/clubsByRegistered/\(userId)")
             .responseJSON { (request, response, data, error) in
+                println(data)
                 var json = JSON(data!)
+                var members = [Member]()
                 for (key, club) in json {
                     let name = club["name"].stringValue
-                    self.myClubs.append(name)
+                    let description = club["description"].stringValue
+                    let profilePicUrl = club["profilePicUrl"].stringValue
+                    let tagline = club["tagline"].stringValue
+                    for(k, member) in club["members"]{
+                        members.append(Member(name: member["name"].stringValue, facebookPicture: member["facebook"].stringValue, id: member["id"].stringValue))
+                    }
+                    self.myClubs.append(Club(name: name, description: description, profilePicUrl: profilePicUrl, tagline: tagline, members: members))
                 }
                 self.tableView.reloadData()
         }
@@ -71,15 +94,24 @@ class MyClubsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         var cell:MyClubCell = tableView.dequeueReusableCellWithIdentifier("MyClubCell") as! MyClubCell
         cell.backgroundColor = UIColor.clearColor()
-        cell.clubTitle.text = myClubs[indexPath.row]
+        cell.clubTitle.text = myClubs[indexPath.row].name
         
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var selectedCell:SidebarCell = tableView.cellForRowAtIndexPath(indexPath)! as! SidebarCell
+        var selectedCell:MyClubCell = tableView.cellForRowAtIndexPath(indexPath)! as! MyClubCell
         selectedCell.contentView.backgroundColor = UIColor(red: 28/255, green: 92/255, blue: 112/255, alpha: 1)
-        //self.performSegueWithIdentifier(options[indexPath.row].segueName, sender: self)
+        self.performSegueWithIdentifier("showClubDetail", sender: self)
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
+        if segue!.identifier == "showClubDetail" {
+            let viewController:ClubViewController = segue!.destinationViewController as! ClubViewController
+            let indexPath = self.tableView.indexPathForSelectedRow()
+            viewController.club = self.myClubs[indexPath!.row]
+        }
         
     }
     
