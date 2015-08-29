@@ -37,7 +37,7 @@ router.get('/clubsByOwner/:id', function(req, res) {
 
 
 /* POST Club page. */
-router.post('/club/save', function(req, res, next) {
+router.post('/club/save', function(req, res) {
   var jsonClub = req.body;
   if(jsonClub._id){
     Club.findByIdAndUpdate(jsonClub._id,jsonClub,function(err, club){
@@ -71,10 +71,10 @@ router.post('/club/register/:id', function(req, res) {
   var _id = req.params.id;
   var jsonUser = req.body;
   if(_id){
-    Club.findByIdAndUpdate(_id, {$pull: {'registered': {id:jsonUser.id}}}, {new: true}, function (err, club) {
+    Club.findByIdAndUpdate(_id, {$pull: {'members': {id:jsonUser.id}}}, {new: true}, function (err, club) {
       if (err) { return res.send(err) }
 
-      Club.findByIdAndUpdate(_id,{$push: {registered: jsonUser}},function(err, club){
+      Club.findByIdAndUpdate(_id,{$push: {members: jsonUser}},function(err, club){
         if (err) {
           res.send("There was a problem updating the information to the database: " + err);
         }else{
@@ -94,7 +94,7 @@ router.get('/clubsByRegistered/:id', function(req, res) {
   var registeredId = req.params.id;
 
   res.setHeader('Content-Type', 'application/json');
-  Club.find({"registered.id": registeredId.toString()},function(err, clubs){
+  Club.find({"members.id": registeredId.toString()},function(err, clubs){
     res.send(JSON.stringify(clubs));
   });
 });

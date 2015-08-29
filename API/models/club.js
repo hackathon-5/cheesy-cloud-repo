@@ -2,8 +2,11 @@ var mongoose = require('mongoose');
 
 var ClubSchema = new mongoose.Schema({
     name: String,
+    tagline: String,
+    profilePicUrl: String,
+    description: String,
     ownerId: Number,
-    registered:[],
+    members:[],
     updated_at: { type: Date, default: Date.now }
 });
 
