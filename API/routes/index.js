@@ -100,8 +100,6 @@ router.get('/club/delete/:id', function(req, res) {
         });
 
     }
-
-
 });
 
 /* POST register for club Club page. */
@@ -139,6 +137,62 @@ router.post('/club/unregister/:id', function(req, res) {
         });
 
     }
+});
+/* POST create a new "post (like a facebook post for a club)" */
+router.post('/club/post/:id', function(req, res) {
+    var _id = req.params.id;
+    var post = req.body;
+    if(post && _id){
+        post.createdDate = new Date();
+        Club.findByIdAndUpdate(_id,{$push: {posts: post}},function(err, club){
+            if (err) {
+                res.send("There was a problem updating the information to the database: " + err);
+            }else{
+                res.setHeader('Content-Type', 'application/json');
+                res.send(JSON.stringify(club));
+            }
+        });
+    }
+});
+/* POST Club post delete. */
+router.post('/club/:id/post/delete', function(req, res) {
+    var title = req.body.title;
+    var _id = req.params.id;
+
+    if(title){
+        Club.findByIdAndUpdate(_id, {$pull: {'posts': {title:title}}}, {new: true}, function (err, club) {
+            res.setHeader('Content-Type', 'application/json');
+            if(err){
+                res.send(JSON.stringify({success:false}))
+            }else{
+                res.send(JSON.stringify({success:true}))
+            }
+        });
+    }
+});
+
+/* GET Clubs posts by member. */
+router.get('/clubsByRegistered/:id/posts', function(req, res) {
+
+    var registeredId = req.params.id;
+    if(registeredId){
+        res.setHeader('Content-Type', 'application/json');
+        Club.find({"members.id": registeredId.toString()},function(err, clubs){
+            var posts = [];
+            for(var i = 0; i< clubs.length; i++){
+                for(var j = 0; j< clubs[i].posts.length; j++){
+                    posts.push(clubs[i].posts[j]);
+                }
+            }
+
+            posts.sort(function(x, y){
+                return x.timestamp - y.timestamp;
+            });
+
+            res.send(JSON.stringify(posts));
+        });
+    }
+
 });
 
 
