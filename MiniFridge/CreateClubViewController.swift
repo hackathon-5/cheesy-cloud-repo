@@ -64,7 +64,10 @@ class CreateClubViewController: UIViewController, UITableViewDelegate {
             return (mutableRequest, nil)
         }), headers:headers)
             .responseString { [weak self] request, response, string, error in
-                println(response)
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewControllerWithIdentifier("SWRevealViewController") as! SWRevealViewController
+                self!.presentViewController(vc, animated: true, completion: nil)
         }
         
 

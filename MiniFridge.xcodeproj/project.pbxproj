@@ -54,6 +54,8 @@
 		2E8E272A1B91BB5E00C54F82 /* mycreated.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E8E27291B91BB5E00C54F82 /* mycreated.png */; };
 		2E8E272C1B91C17400C54F82 /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E272B1B91C17400C54F82 /* ClubViewController.swift */; };
 		2E8E272E1B91C28300C54F82 /* club-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E8E272D1B91C28300C54F82 /* club-bg.png */; };
+		2E8E27301B91E38100C54F82 /* logo_with_text.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E8E272F1B91E38100C54F82 /* logo_with_text.png */; };
+		2E8E27321B91E48500C54F82 /* dark-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E8E27311B91E48500C54F82 /* dark-bg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,8 @@
 		2E8E27291B91BB5E00C54F82 /* mycreated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mycreated.png; sourceTree = "<group>"; };
 		2E8E272B1B91C17400C54F82 /* ClubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
 		2E8E272D1B91C28300C54F82 /* club-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "club-bg.png"; sourceTree = "<group>"; };
+		2E8E272F1B91E38100C54F82 /* logo_with_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_with_text.png; sourceTree = "<group>"; };
+		2E8E27311B91E48500C54F82 /* dark-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark-bg.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,10 +235,12 @@
 		2E68A3A11B9152CD007674B9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2E8E272F1B91E38100C54F82 /* logo_with_text.png */,
 				2E8E27291B91BB5E00C54F82 /* mycreated.png */,
 				2E8E272D1B91C28300C54F82 /* club-bg.png */,
 				2E8E27231B919B7700C54F82 /* splash.png */,
 				2E360A491B917E4900D720D7 /* clubListBackground.png */,
+				2E8E27311B91E48500C54F82 /* dark-bg.png */,
 				2E360A4D1B91875500D720D7 /* clubs.png */,
 				2E360A4E1B91875500D720D7 /* home.png */,
 				2E360A4F1B91875500D720D7 /* plus.png */,
@@ -364,6 +370,7 @@
 				2E360A521B91875500D720D7 /* home.png in Resources */,
 				2E360A431B916BC800D720D7 /* sign_in.png in Resources */,
 				2E360A4A1B917E4A00D720D7 /* clubListBackground.png in Resources */,
+				2E8E27301B91E38100C54F82 /* logo_with_text.png in Resources */,
 				2E360A4C1B9184C400D720D7 /* hamburger (1).png in Resources */,
 				2E360A511B91875500D720D7 /* clubs.png in Resources */,
 				2E360A541B91875500D720D7 /* pencil.png in Resources */,
@@ -372,6 +379,7 @@
 				2E8E272E1B91C28300C54F82 /* club-bg.png in Resources */,
 				2E8E272A1B91BB5E00C54F82 /* mycreated.png in Resources */,
 				2E360A441B916BC800D720D7 /* sign_out.png in Resources */,
+				2E8E27321B91E48500C54F82 /* dark-bg.png in Resources */,
 				2E68A37B1B9130C5007674B9 /* LaunchScreen.xib in Resources */,
 				2E360A531B91875500D720D7 /* plus.png in Resources */,
 				2E68A3781B9130C5007674B9 /* Images.xcassets in Resources */,
