@@ -135,26 +135,7 @@ class SignupViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         let params = [
             "clubId":clubId
         ]
-        
-//        // Make request
-//        request(.GET, "52.3.178.99:3000/api/es/getShipmentDetails", parameters: params)
-//            .responseJSON { (req, res, json, error) in
-//                if(error != nil) {
-//                    var alert = UIAlertController(title: "Error", message: error!.localizedDescription, preferredStyle: UIAlertControllerStyle.Alert)
-//                    alert.addAction(UIAlertAction(title: "Close", style: .Default, handler: { action in
-//                        switch action.style{
-//                        case .Default:
-//                            self.closeView()
-//                        case .Cancel:
-//                            println("cancel")
-//                            
-//                        case .Destructive:
-//                            println("destructive")
-//                        }
-//                    }))
-//                    self.presentViewController(alert, animated: true, completion: nil)
-//                }
-//        }
+
         
         let headers = [
             "Content-Type":"application/json"
