@@ -637,7 +637,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="dark-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="1Uw-Fb-oHm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dark-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="1Uw-Fb-oHm">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="675"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tagline" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mne-kr-ITf">
@@ -652,40 +652,18 @@
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile Pic Url" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ws0-Hb-kzZ">
-                                <rect key="frame" x="21" y="310" width="182" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
-                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o12-oO-w6v">
-                                <rect key="frame" x="338" y="406" width="135" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
-                                <state key="normal" title="Create Club">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="createClub:" destination="MF0-jD-7M7" eventType="touchUpInside" id="PAj-EX-DEp"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8EZ-WZ-Gu9">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8EZ-WZ-Gu9">
                                 <rect key="frame" x="233" y="148" width="240" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hgb-p3-oY5">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hgb-p3-oY5">
                                 <rect key="frame" x="233" y="204" width="240" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cc7-eQ-k73">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cc7-eQ-k73">
                                 <rect key="frame" x="233" y="257" width="240" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="evH-5c-1D5">
-                                <rect key="frame" x="233" y="310" width="240" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -695,6 +673,17 @@
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o12-oO-w6v">
+                                <rect key="frame" x="338" y="323" width="135" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
+                                <state key="normal" title="Create Club">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createClub:" destination="MF0-jD-7M7" eventType="touchUpInside" id="PAj-EX-DEp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -703,8 +692,6 @@
                             <constraint firstItem="Cc7-eQ-k73" firstAttribute="leading" secondItem="r5m-do-Lgz" secondAttribute="trailing" constant="30" id="H8m-yN-Yyc"/>
                             <constraint firstItem="Hgb-p3-oY5" firstAttribute="leading" secondItem="Mne-kr-ITf" secondAttribute="trailing" constant="30" id="TG3-R8-j8Y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8EZ-WZ-Gu9" secondAttribute="trailing" constant="25" id="Tcg-mS-bFf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="evH-5c-1D5" secondAttribute="trailing" constant="25" id="VyU-zq-Ych"/>
-                            <constraint firstItem="evH-5c-1D5" firstAttribute="leading" secondItem="1Uw-Fb-oHm" secondAttribute="trailing" constant="-367" id="ch7-Ke-xc5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="o12-oO-w6v" secondAttribute="trailing" constant="25" id="igq-wQ-Lc2"/>
                             <constraint firstItem="8EZ-WZ-Gu9" firstAttribute="leading" secondItem="cjc-La-fMO" secondAttribute="trailing" constant="18" id="sE7-WO-Li0"/>
                         </constraints>
@@ -724,7 +711,6 @@
                         <outlet property="menuButton" destination="j03-vV-bwA" id="3Kx-Hj-XdM"/>
                         <outlet property="txtDescription" destination="Cc7-eQ-k73" id="cy2-Vk-SHg"/>
                         <outlet property="txtName" destination="8EZ-WZ-Gu9" id="3C3-4r-2Mr"/>
-                        <outlet property="txtPic" destination="evH-5c-1D5" id="fqN-h2-P4y"/>
                         <outlet property="txtTagline" destination="Hgb-p3-oY5" id="Q32-aT-eyM"/>
                     </connections>
                 </viewController>
