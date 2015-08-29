@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210CDC171B91B1DB00D43F42 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210CDC141B91B1DB00D43F42 /* FBSDKCoreKit.framework */; };
+		210CDC181B91B1DB00D43F42 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210CDC151B91B1DB00D43F42 /* FBSDKLoginKit.framework */; };
+		210CDC191B91B1DB00D43F42 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210CDC161B91B1DB00D43F42 /* FBSDKShareKit.framework */; };
+		210CDC1B1B91B4D700D43F42 /* MyCreatedClubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210CDC1A1B91B4D700D43F42 /* MyCreatedClubCell.swift */; };
 		2E360A431B916BC800D720D7 /* sign_in.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E360A411B916BC800D720D7 /* sign_in.png */; };
 		2E360A441B916BC800D720D7 /* sign_out.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E360A421B916BC800D720D7 /* sign_out.png */; };
 		2E360A461B91729800D720D7 /* hamburger.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E360A451B91729800D720D7 /* hamburger.png */; };
@@ -60,6 +64,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		210CDC141B91B1DB00D43F42 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../Downloads/FacebookSDKs-iOS-20150813/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		210CDC151B91B1DB00D43F42 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../Downloads/FacebookSDKs-iOS-20150813/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		210CDC161B91B1DB00D43F42 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../Downloads/FacebookSDKs-iOS-20150813/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		210CDC1A1B91B4D700D43F42 /* MyCreatedClubCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCreatedClubCell.swift; sourceTree = "<group>"; };
 		2E360A411B916BC800D720D7 /* sign_in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sign_in.png; sourceTree = "<group>"; };
 		2E360A421B916BC800D720D7 /* sign_out.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sign_out.png; sourceTree = "<group>"; };
 		2E360A451B91729800D720D7 /* hamburger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hamburger.png; sourceTree = "<group>"; };
@@ -115,6 +123,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E68A3951B9134FA007674B9 /* FBSDKLoginKit.framework in Frameworks */,
+				210CDC171B91B1DB00D43F42 /* FBSDKCoreKit.framework in Frameworks */,
+				210CDC191B91B1DB00D43F42 /* FBSDKShareKit.framework in Frameworks */,
+				210CDC181B91B1DB00D43F42 /* FBSDKLoginKit.framework in Frameworks */,
 				2E68A3941B9134FA007674B9 /* FBSDKCoreKit.framework in Frameworks */,
 				2E68A3961B9134FA007674B9 /* FBSDKShareKit.framework in Frameworks */,
 			);
@@ -200,6 +211,9 @@
 		2E68A3901B9134E8007674B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				210CDC141B91B1DB00D43F42 /* FBSDKCoreKit.framework */,
+				210CDC151B91B1DB00D43F42 /* FBSDKLoginKit.framework */,
+				210CDC161B91B1DB00D43F42 /* FBSDKShareKit.framework */,
 				2E68A3911B9134FA007674B9 /* FBSDKCoreKit.framework */,
 				2E68A3921B9134FA007674B9 /* FBSDKLoginKit.framework */,
 				2E68A3931B9134FA007674B9 /* FBSDKShareKit.framework */,
@@ -251,6 +265,7 @@
 			children = (
 				2E68A3A41B9155C1007674B9 /* SidebarCell.swift */,
 				2E8E27271B91A0DE00C54F82 /* MyClubCell.swift */,
+				210CDC1A1B91B4D700D43F42 /* MyCreatedClubCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -387,6 +402,7 @@
 				2E8E271B1B9194B000C54F82 /* ParameterEncoding.swift in Sources */,
 				2E68A39E1B9147E6007674B9 /* MyClubsViewController.swift in Sources */,
 				2E8E27201B9194B000C54F82 /* Validation.swift in Sources */,
+				210CDC1B1B91B4D700D43F42 /* MyCreatedClubCell.swift in Sources */,
 				2E360A481B91765D00D720D7 /* MyCreatedClubsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,6 +534,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/tonywinters/Downloads/FacebookSDKs-iOS-20150813",
+					"/Users/AJ/Downloads/FacebookSDKs-iOS-20150813",
 				);
 				INFOPLIST_FILE = MiniFridge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -535,6 +552,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/tonywinters/Downloads/FacebookSDKs-iOS-20150813",
+					"/Users/AJ/Downloads/FacebookSDKs-iOS-20150813",
 				);
 				INFOPLIST_FILE = MiniFridge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
