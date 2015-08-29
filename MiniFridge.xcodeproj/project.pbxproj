@@ -11,6 +11,9 @@
 		210CDC181B91B1DB00D43F42 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210CDC151B91B1DB00D43F42 /* FBSDKLoginKit.framework */; };
 		210CDC191B91B1DB00D43F42 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210CDC161B91B1DB00D43F42 /* FBSDKShareKit.framework */; };
 		210CDC1B1B91B4D700D43F42 /* MyCreatedClubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210CDC1A1B91B4D700D43F42 /* MyCreatedClubCell.swift */; };
+		210CDC211B91E16C00D43F42 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210CDC201B91E16C00D43F42 /* CreatePostViewController.swift */; };
+		210CDC231B91E54400D43F42 /* MyPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210CDC221B91E54400D43F42 /* MyPostCell.swift */; };
+		210CDC251B91E56900D43F42 /* MyPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210CDC241B91E56900D43F42 /* MyPostsViewController.swift */; };
 		2E360A431B916BC800D720D7 /* sign_in.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E360A411B916BC800D720D7 /* sign_in.png */; };
 		2E360A441B916BC800D720D7 /* sign_out.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E360A421B916BC800D720D7 /* sign_out.png */; };
 		2E360A461B91729800D720D7 /* hamburger.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E360A451B91729800D720D7 /* hamburger.png */; };
@@ -73,6 +76,9 @@
 		210CDC151B91B1DB00D43F42 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../Downloads/FacebookSDKs-iOS-20150813/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		210CDC161B91B1DB00D43F42 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../Downloads/FacebookSDKs-iOS-20150813/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		210CDC1A1B91B4D700D43F42 /* MyCreatedClubCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCreatedClubCell.swift; sourceTree = "<group>"; };
+		210CDC201B91E16C00D43F42 /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		210CDC221B91E54400D43F42 /* MyPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPostCell.swift; sourceTree = "<group>"; };
+		210CDC241B91E56900D43F42 /* MyPostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPostsViewController.swift; sourceTree = "<group>"; };
 		2E360A411B916BC800D720D7 /* sign_in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sign_in.png; sourceTree = "<group>"; };
 		2E360A421B916BC800D720D7 /* sign_out.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sign_out.png; sourceTree = "<group>"; };
 		2E360A451B91729800D720D7 /* hamburger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hamburger.png; sourceTree = "<group>"; };
@@ -189,6 +195,8 @@
 				2E68A3A61B9157CD007674B9 /* NavigationController.swift */,
 				2E360A471B91765D00D720D7 /* MyCreatedClubsViewController.swift */,
 				2E8E272B1B91C17400C54F82 /* ClubViewController.swift */,
+				210CDC201B91E16C00D43F42 /* CreatePostViewController.swift */,
+				210CDC241B91E56900D43F42 /* MyPostsViewController.swift */,
 			);
 			path = MiniFridge;
 			sourceTree = "<group>";
@@ -281,6 +289,7 @@
 				2E68A3A41B9155C1007674B9 /* SidebarCell.swift */,
 				2E8E27271B91A0DE00C54F82 /* MyClubCell.swift */,
 				210CDC1A1B91B4D700D43F42 /* MyCreatedClubCell.swift */,
+				210CDC221B91E54400D43F42 /* MyPostCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -400,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				210CDC211B91E16C00D43F42 /* CreatePostViewController.swift in Sources */,
 				2E68A39C1B91405B007674B9 /* SidebarController.swift in Sources */,
 				2E8E271C1B9194B000C54F82 /* Request.swift in Sources */,
 				2E68A3731B9130C5007674B9 /* LoginViewController.swift in Sources */,
@@ -414,10 +424,12 @@
 				2E68A3A51B9155C1007674B9 /* SidebarCell.swift in Sources */,
 				2E8E271E1B9194B000C54F82 /* ServerTrustPolicy.swift in Sources */,
 				2E8E271D1B9194B000C54F82 /* ResponseSerialization.swift in Sources */,
+				210CDC231B91E54400D43F42 /* MyPostCell.swift in Sources */,
 				2E8E27221B9194D700C54F82 /* SwiftyJSON.swift in Sources */,
 				2E8E27191B9194B000C54F82 /* Manager.swift in Sources */,
 				2E68A3A71B9157CD007674B9 /* NavigationController.swift in Sources */,
 				2E8E27171B9194B000C54F82 /* Alamofire.swift in Sources */,
+				210CDC251B91E56900D43F42 /* MyPostsViewController.swift in Sources */,
 				2E8E27181B9194B000C54F82 /* Download.swift in Sources */,
 				2E8E271B1B9194B000C54F82 /* ParameterEncoding.swift in Sources */,
 				2E68A39E1B9147E6007674B9 /* MyClubsViewController.swift in Sources */,

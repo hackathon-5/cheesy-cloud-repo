@@ -7,6 +7,7 @@ var ClubSchema = new mongoose.Schema({
     description: String,
     ownerId: Number,
     members:[],
+    posts:[],
     updated_at: { type: Date, default: Date.now }
 });
 
