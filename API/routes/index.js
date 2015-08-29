@@ -49,11 +49,16 @@ router.post('/club/save', function(req, res, next) {
       }
     });
   }else{
-    var club = new Club(jsonClub);
-    club.save();
-
     res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify(club));
+    var club = new Club(jsonClub);
+    club.save(function(err){
+      if(err){
+        res.send(JSON.stringify({success:false}))
+      }else{
+        res.send(JSON.stringify(club));
+      }
+    });
+
   }
 
 

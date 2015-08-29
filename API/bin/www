@@ -15,6 +15,24 @@ var http = require('http');
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
+
+var mongoose = require('mongoose');
+var options = { server: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } },
+  replset: { socketOptions: { keepAlive: 1, connectTimeoutMS : 30000 } } };
+
+var mongodbUri = process.env.MONGO_URI || 'mongodb://localdev:27017/miniFridge';
+
+mongoose.createConnection('mongodb://localhost/miniFridge');
+var conn = mongoose.connection;
+
+conn.on('error', console.error.bind(console, 'connection error:'));
+
+conn.once('open', function() {
+  // Wait for the database connection to establish, then start the app.
+  console.log("we done connected")
+});
+
+
 /**
  * Create HTTP server.
  */

@@ -7,13 +7,9 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var mongoose = require('mongoose');
 
 
 var app = express();
-
-//connect to the mongo db
-mongoose.createConnection('mongodb://mongoHost:27017/miniFridge');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
