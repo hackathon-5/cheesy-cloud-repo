@@ -7,6 +7,8 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
     res.render('index', { title: 'Express' });
 });
+
+
 /* GET Clubs. */
 router.get('/club/list', function(req, res) {
     res.setHeader('Content-Type', 'application/json');
@@ -32,11 +34,20 @@ router.get('/clubsByOwner/:id', function(req, res) {
         res.send(JSON.stringify(clubs));
     });
 });
+/* GET Clubs by member. */
+router.get('/clubsByRegistered/:id', function(req, res) {
 
+    var registeredId = req.params.id;
+    if(registeredId){
+        res.setHeader('Content-Type', 'application/json');
+        Club.find({"members.id": registeredId.toString()},function(err, clubs){
+            res.send(JSON.stringify(clubs));
+        });
+    }
 
+});
 
-
-/* POST Club page. */
+/* POST Club save. */
 router.post('/club/save', function(req, res) {
     var jsonClub = req.body;
 
@@ -68,14 +79,35 @@ router.post('/club/save', function(req, res) {
 
 
 });
+/* GET Club delete. */
+router.get('/club/delete/:id', function(req, res) {
+    var _id = req.params.id;
+
+    if(_id){
+        Club.findByIdAndRemove(_id,function(err, club){
+            res.setHeader('Content-Type', 'application/json');
+            if(err){
+                res.send(JSON.stringify({success:false}))
+            }else{
+                res.send(JSON.stringify({success:true}))
+            }
+        });
+    }else{
+        res.setHeader('Content-Type', 'application/json');
+        var club = new Club(jsonClub);
+        club.save(function(err){
+
+        });
+
+    }
 
 
+});
 
-/* register for club Club page. */
+/* POST register for club Club page. */
 router.post('/club/register/:id', function(req, res) {
     var _id = req.params.id;
     var jsonUser = req.body;
-    console.log("to register: " + JSON.stringify(jsonUser));
     if(jsonUser && _id){
         Club.findByIdAndUpdate(_id, {$pull: {'members': {id:jsonUser.id}}}, {new: true}, function (err, club) {
             if (err) { return res.send(err) }
@@ -92,19 +124,21 @@ router.post('/club/register/:id', function(req, res) {
 
     }
 });
-
-
-/* register for club Club page. */
-router.get('/clubsByRegistered/:id', function(req, res) {
-
-    var registeredId = req.params.id;
-    if(registeredId){
-        res.setHeader('Content-Type', 'application/json');
-        Club.find({"members.id": registeredId.toString()},function(err, clubs){
-            res.send(JSON.stringify(clubs));
+/* POST unregister for club Club page. */
+router.post('/club/unregister/:id', function(req, res) {
+    var _id = req.params.id;
+    var jsonUser = req.body;
+    if(jsonUser && _id){
+        Club.findByIdAndUpdate(_id, {$pull: {'members': {id:jsonUser.id}}}, {new: true}, function (err, club) {
+            res.setHeader('Content-Type', 'application/json');
+            if(err){
+                res.send(JSON.stringify({success:false}))
+            }else{
+                res.send(JSON.stringify({success:true}))
+            }
         });
-    }
 
+    }
 });
 
 
