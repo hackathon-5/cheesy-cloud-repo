@@ -126,7 +126,7 @@ class SignupViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     
     func closeView() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("Main") as! UIViewController
+        let vc = storyboard.instantiateViewControllerWithIdentifier("SWRevealViewController") as! SWRevealViewController
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
@@ -173,6 +173,7 @@ class SignupViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         }), headers:headers)
             .responseString { [weak self] request, response, string, error in
                 println(response)
+                self?.closeView()
         }
 
     }

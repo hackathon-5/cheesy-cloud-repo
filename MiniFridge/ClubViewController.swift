@@ -32,6 +32,10 @@ class ClubViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        club.members.removeAll(keepCapacity: false)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
